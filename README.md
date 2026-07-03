@@ -1,55 +1,35 @@
-# devops-learning-journal
-A public journal documenting my journey toward becoming a DevOps and Cloud Engineer through hands-on practice, notes, scripts, and real-world experiments in Linux, Git, Networking, Docker, AWS, and CI/CD.
+# DevOps Learning Journal
 
-## What I’m Learning
+Hi, I'm Mahdi.
 
-* Linux System Administration
-* Bash Scripting and Automation
-* Git and GitHub Workflows
-* Computer Networking Fundamentals
-* Docker and Containerization
-* Cloud Computing with AWS
-* CI/CD Pipelines
-* Infrastructure Automation
-* Kubernetes and Orchestration
+I am documenting my journey toward becoming a DevOps and Cloud Engineer.
 
-## Repository Structure
+This repository contains my notes, experiments, scripts, and daily learning logs while studying:
 
-This repository contains:
+- Linux
+- Bash Scripting
+- Networking
+- Git and GitHub
+- Docker
+- AWS
+- CI/CD
+- Kubernetes
 
-* Technical notes and study summaries
-* Shell scripts and automation exercises
-* Hands-on experiments and mini projects
-* Daily learning logs and progress tracking
-* DevOps and cloud engineering practice work
+## Goal
 
-## Current Progress
+My goal is to build strong engineering fundamentals and transition into cloud and DevOps roles.
 
-Completed:
+## Progress
 
-* Linux fundamentals
-* Bash scripting basics
-* Git and SSH authentication
-* Networking fundamentals
+Current focus:
 
-In Progress:
-
-* Docker
-* AWS
-* CI/CD pipelines
-
-Upcoming:
-
-* Terraform
-* Kubernetes
-* Monitoring and Observability
-
-## Purpose
-
-I believe consistent learning and hands-on practice build strong engineering skills.
-
-This repository is my public learning journal where I document progress, experiments, challenges, and growth as I work toward a career in DevOps and Cloud Engineering.
+- [x] Linux fundamentals
+- [x] Bash scripting basics
+- [x] Git and SSH authentication
+- [ ] Docker
+- [ ] AWS
+- [ ] CI/CD pipelines
+- [ ] Kubernetes
 
 ---
-
-Learning in public. Building consistently. Improving every day.
+Learning in public.
