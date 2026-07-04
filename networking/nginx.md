@@ -1,10 +1,51 @@
-[?1049h[>4;2m[?1h=[?2004h[?1004h[1;44r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[44;1H<server (NGINX) was only serving HTTP. As a result, Cloudflare could not establish a secure coIllegal file name[2;1H[94m~                                                                                                                                          [3;1H~                                                                                                                                          [4;1H~                                                                                                                                          [5;1H~                                                                                                                                          [6;1H~                                                                                                                                          [7;1H~                                                                                                                                          [8;1H~                                                                                                                                          [9;1H~                                                                                                                                          [10;1H~                                                                                                                                          [11;1H~                                                                                                                                          [12;1H~                                                                                                                                          [13;1H~                                                                                                                                          [14;1H~                                                                                                                                          [15;1H~                                                                                                                                          [16;1H~                                                                                                                                          [17;1H~                                                                                                                                          [18;1H~                                                                                                                                          [19;1H~                                                                                                                                          [20;1H~                                                                                                                                          [21;1H~                                                                                                                                          [22;1H~                                                                                                                                          [23;1H~                                                                                                                                          [24;1H~                                                                                                                                          [25;1H~                                                                                                                                          [26;1H~                                                                                                                                          [27;1H~                                                                                                                                          [28;1H~                                                                                                                                          [29;1H~                                                                                                                                          [30;1H~                                                                                                                                          [31;1H~                                                                                                                                          [32;1H~                                                                                                                                          [33;1H~                                                                                                                                          [34;1H~                                                                                                                                          [35;1H~                                                                                                                                          [36;1H~                                                                                                                                          [37;1H~                                                                                                                                          [38;1H~                                                                                                                                          [39;1H~                                                                                                                                          [40;1H~                                                                                                                                          [41;1H~                                                                                                                                          [42;1H~                                                                                                                                          [43;1H~                                                                                                                                          [1;1H[?25h[?4m[?25l[m[44;1H[K[44;1H:[?25h[?25l[44;1H[K[1;1H[?25h[?25l[44;1H:[35;1H[7m<dflare could not establish a secure connection to the server.
+# NGINX on AWS EC2 with Custom Domain and HTTPS
+
+This project demonstrates how to deploy an NGINX web server on an AWS EC2 instance and make it accessible through a custom domain managed with Cloudflare. HTTPS was enabled using Let's Encrypt and Certbot.
+
+## Project Objectives
+
+- Launch an AWS EC2 instance (Ubuntu)
+- Install and configure NGINX
+- Register and configure a custom domain
+- Point the domain to the EC2 instance using Cloudflare DNS
+- Secure the website with HTTPS using Let's Encrypt
+
+## Technologies Used
+
+- AWS EC2
+- Ubuntu
+- NGINX
+- Cloudflare DNS
+- Let's Encrypt
+- Certbot
+
+## Challenges Faced
+
+While the EC2 instance and NGINX were working correctly over HTTP, the domain initially returned **Cloudflare Error 521 (Web Server Is Down)**.
+
+### Root Cause
+
+Cloudflare was configured to use HTTPS, but the origin server (NGINX) was only serving HTTP. As a result, Cloudflare could not establish a secure connection to the server.
 
 ### Solution
 
-Installed Certbot and configured NGINX with a Let's Encrypt  [m[36;1H[94m:[mqw![36;5H[K[37;1H[94m:[mwq[37;4H[K[38;1H[94m:[mq![38;4H[K[39;1H[94m:[mwq![39;5H[K[40;1H[94m:[mq[40;3H[K[41;1H[94m:[m[41;2H[K[43;1H[1m[7m[Command Line]                                                                                                                             [41;2H[?25h
+Installed Certbot and configured NGINX with a Let's Encrypt SSL certificate:
 
+```bash
+sudo apt update
+sudo apt install certbot python3-certbot-nginx
+sudo certbot --nginx -d your-domain.com -d subdomain.your-domain.com
+```
 
-[?25l[m[35;1H[94m~                                                                                                                                          [36;1H~                                                                                                                                          [37;1H~                                                                                                                                          [38;1H~                                                                                                                                          [39;1H~                                                                                                                                          [40;1H~                                                                                                                                          [41;1H~                                                                                                                                          [43;1H~                                                                                                                                          [1;1H[?25h[44;1H[m[?1004l[?2004l[?1l>[?1049l[>4;mVim: Caught deadly signal HUP
-Vim: Finished.
-[44;1H[23;2t[23;1t
+After obtaining the SSL certificate, HTTPS worked successfully and the website became accessible through Cloudflare.
+
+## Outcome
+
+- ✅ NGINX deployed on AWS EC2
+- ✅ Custom domain configured with Cloudflare
+- ✅ HTTPS enabled with Let's Encrypt
+- ✅ Website successfully accessible over HTTPS
+
+## Live Demo
+
+https://nginx.ina-warsame.uk
