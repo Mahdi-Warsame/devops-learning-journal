@@ -1,10 +1,8 @@
-version: '3.8'
-
 services:
   web:
-    build: 400884013157.dkr.ecr.eu-north-1.amazonaws.com/flask-mysql:latest
+    image: my-flask-app:multistaged
     ports:
-      - "5003:5003"
+      - "5002:5002"
     depends_on:
       - mydb
 
